@@ -1,4 +1,4 @@
-package es.uva.inf.poo.entraga.clases;
+package es.uva.inf.poo.entrega.clases;
 
 public class FlatRack extends Contenedor{
 	

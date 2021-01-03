@@ -1,4 +1,4 @@
-package es.uva.inf.poo.entraga.clases;
+package es.uva.inf.poo.entrega.clases;
 import es.uva.inf.poo.entraga.clases.Contenedor;
 /**
  * Imlementacion de la clase plaza, que representa las plazas que tiene un muelle.

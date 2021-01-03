@@ -1,4 +1,4 @@
-package es.uva.inf.poo.entraga.clases;
+package es.uva.inf.poo.entrega.clases;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -96,7 +96,7 @@ public abstract class Trayecto {
 		return listaInfo;
 	}
 	/**
-	 * Obtener información completa trayecto
+	 * Obtener informaciï¿½n completa trayecto
 	 * @return lista con localidad puerto origen, pais, fecha de inicio. localida puerto destino, pais y feccha fin trayecto
 	 */
 	/**

@@ -1,4 +1,4 @@
-package es.uva.inf.poo.entraga.clases;
+package es.uva.inf.poo.entrega.clases;
 import java.util.ArrayList;
 
 import es.uva.inf.poo.entraga.clases.*;
@@ -50,7 +50,7 @@ public class Muelle {
 	 * @param latitudeGD latitud 
 	 * @param longitudeGD longitud
 	 */
-	//Registro de cambios. Añado tres parametros al constructor
+	//Registro de cambios. Aï¿½ado tres parametros al constructor
 	public Muelle(int id,boolean estado,double latitudeGD, double longitudeGD, boolean aceptaBarco, boolean aceptaTren, boolean aceptaCamion){
 		identificador = comprobarIdentificador(id);
 		operativo = estado;

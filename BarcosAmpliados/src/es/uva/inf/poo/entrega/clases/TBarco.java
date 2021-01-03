@@ -1,4 +1,4 @@
-package es.uva.inf.poo.entraga.clases;
+package es.uva.inf.poo.entrega.clases;
 
 import java.time.LocalDate;
 /**
