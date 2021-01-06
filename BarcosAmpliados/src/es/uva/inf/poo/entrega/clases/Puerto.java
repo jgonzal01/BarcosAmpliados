@@ -2,7 +2,7 @@ package es.uva.inf.poo.entrega.clases;
 import java.util.ArrayList;
 import es.uva.inf.poo.maps.GPSCoordinate;
 /**
- * Implementaci�n de la clase puerto, que representa a un puerto de una localidad,
+ * Implementacion de la clase puerto, que representa a un puerto de una localidad,
  * que es un centro logistico de tranporte maritimo donde entran y salen barcos 
  * para intercambiar contenedores con mercancias. Cada puerto contiene un numero 
  * diferente de muelles que son espacios donde almacenar contenedores en plazas
@@ -37,6 +37,12 @@ public class Puerto {
 		
 		
 	}private String comprobarIdLocalidad(String id) {
+		for (int x = 0; x < id.length(); x++) {
+			char c = id.charAt(x);
+	        if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))){
+	        	throw new IllegalArgumentException();
+	        }
+		}
 		if (id.length()!=3) {
 			throw new IllegalArgumentException();
 		}else {
@@ -44,6 +50,12 @@ public class Puerto {
 		}
 	}
 	private String comprobarIdPais(String id) {
+		for (int x = 0; x < id.length(); x++) {
+			char c = id.charAt(x);
+	        if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))){
+	        	throw new IllegalArgumentException();
+	        }
+		}
 		if(id.length() != 2) {
 			throw new IllegalArgumentException();
 		}else {
@@ -52,7 +64,7 @@ public class Puerto {
 	}
 	/**
 	 * Getter de la identificacion de pais de un puerto
-	 * @return identificacion de pa�s
+	 * @return identificacion de pais
 	 */
 	public String getIdPais() {
 		return idPais;
@@ -82,10 +94,16 @@ public class Puerto {
 		return listaMuelles;
 	}
 	/**
-	 * A�ade un muelle al puerte 
-	 * @param muelle que se desea a�adir
+	 * Anade un muelle al puerte 
+	 * @param muelle que se desea anadir
 	 */
 	public void anadirMuelle(Muelle muelle) {
+		for (Muelle i : listaMuelles) {
+			if (i.getNombre()== muelle.getNombre()) {
+				throw new IllegalArgumentException();
+			}
+			
+		}
 		
 		listaMuelles.add(muelle);
 	}
@@ -125,7 +143,7 @@ public class Puerto {
 		return listaOperativos;
 	}
 	/**
-	 * Obtiene una lista con los muelles con espacio, previamnete se tiene que haber a�adido una plaza.
+	 * Obtiene una lista con los muelles con espacio, previamnete se tiene que haber anadido una plaza.
 	 * @return lista muelles con espacio
 	 */
 	public ArrayList<Muelle> listaMuellesConEspacio(){
@@ -151,7 +169,7 @@ public class Puerto {
 		}return true;
 	}
 	/**
-	 * Obtiene una lista con los muelles que est� a una distancia menor de un punto GPS
+	 * Obtiene una lista con los muelles que esta a una distancia menor de un punto GPS
 	 * @param punto GPS
 	 * @param dist distancia a comparar
 	 * @return lista de muelles con distancia menor a un punto GPS
