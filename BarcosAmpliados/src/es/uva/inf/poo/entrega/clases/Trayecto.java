@@ -2,7 +2,6 @@ package es.uva.inf.poo.entrega.clases;
 import java.time.LocalDate;
 import java.time.Period;
 
-import es.uva.inf.poo.entraga.clases.*;
 /**
  * Implementacion de la clase trayecto, que representa los viajes que hace un barco entre dos muelles transportando contenedores.
  * @author igndomi 

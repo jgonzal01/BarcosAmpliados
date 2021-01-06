@@ -1,8 +1,5 @@
 package es.uva.inf.poo.entrega.clases;
 import java.util.ArrayList;
-
-import es.uva.inf.poo.entraga.clases.*;
-
 import java.time.LocalDate;
 /**
  * Clase que representa objetos de tipo contenedor, que son guardados en plazas de muelles 

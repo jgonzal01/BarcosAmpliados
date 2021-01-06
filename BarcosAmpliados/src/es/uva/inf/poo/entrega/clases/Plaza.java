@@ -1,5 +1,5 @@
 package es.uva.inf.poo.entrega.clases;
-import es.uva.inf.poo.entraga.clases.Contenedor;
+
 /**
  * Imlementacion de la clase plaza, que representa las plazas que tiene un muelle.
  * Las plazas son un el lugar de tama�o el de un contenedor de ancho y de profundo

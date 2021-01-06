@@ -1,7 +1,5 @@
 package es.uva.inf.poo.entrega.clases;
 import java.util.ArrayList;
-
-import es.uva.inf.poo.entraga.clases.Muelle;
 import es.uva.inf.poo.maps.GPSCoordinate;
 /**
  * Implementaci�n de la clase puerto, que representa a un puerto de una localidad,

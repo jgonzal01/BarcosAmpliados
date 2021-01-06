@@ -1,6 +1,5 @@
 package es.uva.inf.poo.entrega.clases;
 
-import es.uva.inf.poo.entraga.clases.*;
 
 public class Estandar extends Contenedor {
 	public Estandar(String codDueno, char equip, int numSerie,int digitoControl, double pes, char udPeso, double vol, char udVol,  String est, boolean tech) {
