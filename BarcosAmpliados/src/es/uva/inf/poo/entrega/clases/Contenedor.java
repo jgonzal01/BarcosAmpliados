@@ -10,7 +10,7 @@ import java.time.LocalDate;
  */
 public abstract class Contenedor {
 	/**
-	 * Codigo de tres letra mayusculas que indica el due�o 
+	 * Codigo de tres letra mayusculas que indica el dueno 
 	 */
 	private String codigoDueno;
 	/** 
@@ -42,11 +42,19 @@ public abstract class Contenedor {
 	 */
 	private boolean techo;
 	/**
+	 * Constante para el cambio de pies cubicos a metros cubicos
+	 */
+	final double PIES_CUBICOS_A_METROS = 35.3147;
+	/**
+	 * COnstante para el cambio de Kilos a Libras
+	 */
+	final double KILOS_A_LIBRAS = 0.4535;
+	/**
 	 * Lista trayectos
 	 */
 	private ArrayList<Trayecto> listaTrayectos = new ArrayList<Trayecto>();
 	/**Inicializacion de la clase contenedor 
-	 * @param codDue�o codigo del due�o
+	 * @param codDueno codigo del dueno
 	 * @param equip equipamiento del contenedor
 	 * @param numSerie numero de serie
 	 * @param digitoControl digito que verifica el nombre del contenedor
@@ -72,24 +80,9 @@ public abstract class Contenedor {
 	}
 	
 		
-			
-	
-	/*/**
-	 * Dado un precio de dia y de millas calcula el precio total de todos los trayectos
-	 * @param costeDia coste por dia
-	 * @param costeMilla por milla viajada
-	 * @return precio total de los trayectos realizados por un contenedor 
-	 *
-	
-	public double costeTrayectos(double costeDia, double costeMilla) {
-		double precio = 0;
-		for (int i = 0; i<listaTrayectos.size();i++) {
-			precio = listaTrayectos.get(i).precio(costeDia, costeMilla) + precio;
-		}return precio;
-	}
-	*/
+
 	/**
-	 * Se a�ade a un Arraylist los trayectos que va realizando un contenedor
+	 * Se anade a un Arraylist los trayectos que va realizando un contenedor
 	 * @param trayecto Trayecto que raliza un contenedor
 	 */
 	
@@ -104,8 +97,8 @@ public abstract class Contenedor {
 		return listaTrayectos;
 	}
 	/**
-	 * Getter del codigo de due�o
-	 * @return codigo de due�o
+	 * Getter del codigo de dueno
+	 * @return codigo de dueno
 	 */
 	public String getCodigoDueno() {
 		return codigoDueno;
@@ -134,7 +127,7 @@ public abstract class Contenedor {
 		return digitoControl;
 	}
 	/**
-	 * Getter del nombre del contenedor como concatenaci�n del codigo del due�o, letra de quipamiento, numero de serie y digito de control
+	 * Getter del nombre del contenedor como concatenacion del codigo del dueno, letra de quipamiento, numero de serie y digito de control
 	 * @return nombre del contenedor
 	 */
 	public String getNombre() {
@@ -183,7 +176,7 @@ public abstract class Contenedor {
 	 * @return peso en kilos
 	 */
 	public double pesoEnLibras() {
-		double libras= peso/0.4535;
+		double libras= peso/KILOS_A_LIBRAS;
 		return libras;
 	}
 	/**
@@ -198,7 +191,7 @@ public abstract class Contenedor {
 	 * @return volumen en metros cubicos
 	 */
 	public double volumenEnPiesCubicos() {
-		double pies= volumen*35.3147;
+		double pies= volumen*PIES_CUBICOS_A_METROS;
 		return pies;
 	}
 	/**
@@ -222,7 +215,7 @@ public abstract class Contenedor {
 		}
 	}
 	private String comprobarCodigoDueno(String codigo) {
-		//CODIGO DUE�O 
+		
 		if(codigo.length() != 3) {
 			throw new IllegalArgumentException();
 			
@@ -262,7 +255,7 @@ public abstract class Contenedor {
 		if (udPeso=='k'||udPeso == 'K') {
 			return pes;
 		}else if (udPeso=='l'||udPeso == 'L'){
-				return pes*0.4535;
+				return pes*KILOS_A_LIBRAS;
 		}
 		
 		throw new IllegalArgumentException();
@@ -277,7 +270,7 @@ public abstract class Contenedor {
 		if (udVolum=='m'||udVolum == 'M') {
 			return vol;
 		}else if (udVolum=='p' || udVolum == 'P'){
-				return vol / 35.3147;
+				return vol / PIES_CUBICOS_A_METROS;
 			}
 		else{
 			throw new IllegalArgumentException();
