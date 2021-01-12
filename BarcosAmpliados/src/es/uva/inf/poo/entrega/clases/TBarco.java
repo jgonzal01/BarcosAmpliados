@@ -3,8 +3,8 @@ package es.uva.inf.poo.entrega.clases;
 import java.time.LocalDate;
 /**
  * Clase que representa la clas trayecto en Barco. Hereda de la clase simple
- * @author nacho
- *
+ * @author igndomi
+ * @author jgonzal
  */
 public class TBarco extends Simple {
 	/**
