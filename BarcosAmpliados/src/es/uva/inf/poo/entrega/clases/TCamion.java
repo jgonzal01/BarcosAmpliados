@@ -1,17 +1,12 @@
 package es.uva.inf.poo.entrega.clases;
 
 import java.time.LocalDate;
-
+/**
+* Clase que representa un trayecto por camion entre dos muelles de dos puertos. Hereda de la clase simple
+* @author igndomi
+* @author jgozal
+*/	
 	
-	/**
-	 * 
-	 * @param puertoOrigen
-	 * @param muelleOrigen
-	 * @param puertoDestino
-	 * @param muelleDestino
-	 * @param fechaSalida
-	 * @param fechaLlegada
-	 */
 public class TCamion extends Simple {
 	/**
 	 * Constante de Coste fijo por trayecto de 400 euros
@@ -21,7 +16,15 @@ public class TCamion extends Simple {
 	 * Constante de Coste variable por kilometro de 4,5 euros
 	*/
 	private final double COSTE_KILOMETRO = 4.5;
-	
+	/**
+	 * 
+	 * @param puertoOrigen
+	 * @param muelleOrigen
+	 * @param puertoDestino
+	 * @param muelleDestino
+	 * @param fechaSalida
+	 * @param fechaLlegada
+	 */
 	public TCamion(Puerto puertoOrigen, Muelle muelleOrigen, Puerto puertoDestino,Muelle muelleDestino, LocalDate fechaSalida, LocalDate fechaLlegada ) {
 		super(puertoOrigen, muelleOrigen, puertoDestino, muelleDestino, fechaSalida, fechaLlegada);
 	}
