@@ -48,7 +48,6 @@ public class Muelle {
 	 * @param latitudeGD latitud 
 	 * @param longitudeGD longitud
 	 */
-	//Registro de cambios. A�ado tres parametros al constructor
 	public Muelle(int id,boolean estado,double latitudeGD, double longitudeGD, boolean aceptaBarco, boolean aceptaTren, boolean aceptaCamion){
 		identificador = comprobarIdentificador(id);
 		operativo = estado;
@@ -153,7 +152,7 @@ public class Muelle {
 		
 	}
 	/**
-	 * Comprobacion de la situaci�n del Muelle
+	 * Comprobacion de la situacion del Muelle
 	 * @return False si el Muelle no esta lleno, True si el Muelle no tiene espacio
 	 */
 	public boolean estaLleno() {
@@ -186,7 +185,6 @@ public class Muelle {
 		listaPlazas.add(p);
 	}
 	
-	//Registro de cambios. Sobrecarga 
 	private void insertarContenedor(Contenedor contenedor) {
 		boolean flag = false;
 		for (int i=0;i<listaPlazas.size();i++) {
@@ -230,7 +228,7 @@ public class Muelle {
 	 * @param FlatRack contenedor
 	 * @throws ArrayIndexOutOfBoundsException() cuando no hay dos plazas enteras vacias o cuando el muelle no puede realizar trayectos por barco ni por tren
 	 */
-
+	
 	public void anadirContenedor(FlatRack contenedor) {
 		if (!(admiteBarco||admiteTren)) {
 			throw new IllegalArgumentException();
